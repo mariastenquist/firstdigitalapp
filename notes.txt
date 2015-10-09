@@ -1,0 +1,31 @@
+deploy an app to digital ocean
+
+step 1: put a completed express app on github
+step 2: after signing up for digital ocean, click: 'create droplet'
+step 3: basic settings
+step 4: Ubuntu, and MEAN 14. (choose an operating system)
+5: check your email
+6: login to our server with: ssh <username>@<ip address> then paste in info, change password
+7: change the password when prompted
+8: delete the sample app in opt/mean
+9: clone your app onto the droplet
+10: run npm install to grab dependencies
+11: run npm install -g forever
+12: start your app with 'forever start app.js' (or whatever the entry point is)
+13: if anything goes wrong, run 'forever list' to view running processes. If something doesn't look right check the log file. Q will get you out of less. 
+
+14: update app:
+git pull origin master
+forever restart bin/www
+
+
+----better practices-----
+
+after logging in the first time, create a new user account, and then disable the root user.
+
+use SSH keys instead of passwords for making the SSH connection.
+
+terminal tips:
+when looged in via ssh, there's no graphical interface. use the command 'less' to read files. Press 'q' to exit less.
+
+'nano' is an easy to use command-line text editor. 
